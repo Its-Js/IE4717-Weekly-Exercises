@@ -1,0 +1,118 @@
+body {
+	background-color: #e7dfac;
+	font-family: sans-serif;
+}
+
+#wrapper {
+	background-color: #e7dfac;
+	min-width: 800px;
+	margin: auto;
+	width: 80%;
+	box-shadow: 5px 5px 5px;
+
+}
+
+header {
+	background-color: #d1b38e;
+	text-align: center;
+}
+
+.content {
+	background-color: #f5f5dd;
+	margin-left: 150px;
+	padding: 5px 20px 5px 20px;
+}
+
+#leftcolumn {
+	float: left;
+}
+#leftcolumn ul {
+	list-style-type: none;
+	text-align: center;
+	font-size: 18px;
+}
+#leftcolumn a {
+	text-decoration: none;
+}
+a:link {color: #794C43;}
+a:visited {color: #794C43;}
+a:hover {color: #A57D5F;}
+
+#rightcolumn {
+	background-color: #e2d1b2;
+}
+#rightcolumn h2 {
+	color: #350003;
+}
+#rightcolumn ul {
+	list-style-image: url(coffeelist.png);
+	color: #423431;
+	margin-left: 290px;
+}
+#rightcolumn p {
+	color: #423431;
+	margin-left: 300px;
+}
+
+#floatleft {
+	float: left;
+}
+
+footer {
+	background-color: #d1b38e;
+	padding: 20px;
+	margin: auto;
+	text-align: center;
+}
+
+#menutable {
+	margin-left: 50px;
+	padding-bottom: 20px;
+}
+
+#menutable .brownrow {
+	background-color: #D1B38F
+}
+
+#menutable th {
+	text-align: center;
+	padding: 10px 20px 10px 20px;
+}
+
+#menutable td {
+	padding: 10px;
+}
+
+#musictable {
+	margin-left: 100px;
+	padding: 20px;
+}
+
+#musictable thead {
+	background-color: #E2D1B1;
+	color: #2A0304;
+	font-weight:bolder;
+	font-size: 16px;
+}
+
+#musictable tbody tr td{
+	padding: 20px;
+}
+
+#rightcolumn form {
+	padding: 10px;
+}
+
+#rightcolumn label {
+	float: left; clear: left;
+	display: block; width: 100px;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+#rightcolumn input, textarea {
+	margin-top: 10px;
+	display: block;
+}
