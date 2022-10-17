@@ -55,14 +55,20 @@
                     </td>
                   </tr>
 
-                  <tr>
-                    <td style="background-color: #f5f5dd">
+                    <tr>
+                      <td style="background-color: #f5f5dd">
                       <input type="checkbox" name="" id="" />
                     </td>
                     <th>Cafe au Lait</th>
                     <td>
                       House blended coffee infused into a smooth, steamed
                       <br />milk. <br /><br />
+                      <div class="dffdraic">
+                        <div class="dffdraic">
+                          Single
+                          <div class="dffdraic">
+                            <div>$</div>
+                            <div>
                       <input
                         type="radio"
                         name="price2"
@@ -138,9 +144,14 @@
           d = document.querySelector('input[name="qty2"]').value;
           document.querySelector('input[name="subtotal2"]').value = c * d;
 
-          e = document.querySelector('input[name="price3"]:checked').value;
-          f = document.querySelector('input[name="qty3"]').value;
-          document.querySelector('input[name="subtotal3"]').value = e * f;
+        function handleChange2(checkbox) {
+          if (checkbox.checked == true) {
+            document.getElementById("2").removeAttribute("readonly");
+            document.getElementById("2").removeAttribute("readonly");
+          } else
+          document.getElementById("2").setAttribute("readonly", "readonly");
+          document.getElementById("2").setAttribute("readonly", "readonly");
+        }
 
           document.querySelector('input[name="totalprice"]').value =
             a * b + c * d + e * f;
