@@ -33,87 +33,161 @@
           <div id="rightcolumn">
             <div class="content">
               <h2>Click to update product prices:</h2>
-              <div id="menutable">
-                <table border="0" onchange="myfunction()">
-                  <tr class="brownrow">
-                    <td style="background-color: #f5f5dd">
-                      <input type="checkbox" name="" id="" />
-                    </td>
-                    <th>Just Java</th>
-                    <td>
-                      Regular house blend. decaffeinated coffee. or flavor of
-                      <br />the day. <br /><br />
-                      <input
-                        type="radio"
-                        name="price1"
-                        value="2.00"
-                        style="float: left; margin-top: 1px"
-                        checked="checked"
-                      /><strong style="margin-right: 10px"
-                        >Endless Cup $2.00</strong
-                      >
-                    </td>
-                  </tr>
+              <form name="myform" action="#" method="post">
+                <div id="menutable" onchange="javascript: form.submit()">
+                  <table border="0">
+                    <tr class="brownrow">
+                      <td style="background-color: #f5f5dd">
+                        <input
+                          type="checkbox"
+                          name=""
+                          id=""
+                          onchange="handleChange1(this)"
+                        />
+                      </td>
+                      <th>Just Java</th>
+                      <td>
+                        Regular house blend. decaffeinated coffee. or flavor of
+                        <br />the day. <br /><br />
+                        <div class="dffdraic">
+                          <div class="dffdraic">
+                            Single
+                            <div class="dffdraic">
+                              <div style="margin-left: 4px">$</div>
+                              <div>
+                                <input
+                                  type="text"
+                                  name="jj-price-single"
+                                  id="jj-price-single"
+                                  value="2.00"
+                                  min="0"
+                                  onblur="this.value = 
+                                  !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
+                                  readonly
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
 
                     <tr>
                       <td style="background-color: #f5f5dd">
-                      <input type="checkbox" name="" id="" />
-                    </td>
-                    <th>Cafe au Lait</th>
-                    <td>
-                      House blended coffee infused into a smooth, steamed
-                      <br />milk. <br /><br />
-                      <div class="dffdraic">
+                        <input
+                          type="checkbox"
+                          name=""
+                          id=""
+                          onchange="handleChange2(this)"
+                        />
+                      </td>
+                      <th>Cafe au Lait</th>
+                      <td>
+                        House blended coffee infused into a smooth, steamed
+                        <br />milk. <br /><br />
                         <div class="dffdraic">
-                          Single
                           <div class="dffdraic">
-                            <div>$</div>
-                            <div>
-                      <input
-                        type="radio"
-                        name="price2"
-                        value="2.00"
-                        style="float: left; margin-top: 1px"
-                        checked="checked"
-                      /><strong style="float: left; margin-right: 10px"
-                        >Single $2.00</strong
-                      >
-                      <input
-                        type="radio"
-                        name="price2"
-                        value="3.00"
-                        style="float: left; margin-top: 1px"
-                      /><strong>Double $3.00</strong>
-                    </td>
-                  </tr>
+                            Single
+                            <div class="dffdraic">
+                              <div style="margin-left: 4px">$</div>
+                              <div>
+                                <input
+                                  type="text"
+                                  name="cal-price-single"
+                                  id="cal-price-single"
+                                  value="2.00"
+                                  onblur="this.value = 
+                                  !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
+                                  readonly
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="dffdraic">
+                            Double
+                            <div class="dffdraic">
+                              <div style="margin-left: 4px">$</div>
+                              <div>
+                                <input
+                                  type="text"
+                                  name="cal-price-double"
+                                  id="cal-price-double"
+                                  value="3.00"
+                                  onblur="this.value = 
+                                  !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
+                                  readonly
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
 
-                  <tr class="brownrow">
-                    <td style="background-color: #f5f5dd">
-                      <input type="checkbox" name="" id="" />
-                    </td>
-                    <th>Iced<br />Cappuccino</th>
-                    <td>
-                      Sweetened espresso blended with icy-cold milk and
-                      <br />served in a chilled glass. <br /><br />
-                      <input
-                        type="radio"
-                        name="price3"
-                        value="4.75"
-                        style="float: left; margin-top: 1px"
-                        checked="checked"
-                      /><strong style="float: left; margin-right: 10px"
-                        >Single $4.75</strong
-                      >
-                      <input
-                        type="radio"
-                        name="price3"
-                        value="5.75"
-                        style="float: left; margin-top: 1px"
-                      /><strong>Double $5.75</strong>
-                    </td>
-                  </tr>
-                </table>
-              </div>
+                    <tr class="brownrow">
+                      <td style="background-color: #f5f5dd">
+                        <input
+                          type="checkbox"
+                          name=""
+                          id=""
+                          onchange="handleChange3(this)"
+                        />
+                      </td>
+                      <th>Iced<br />Cappuccino</th>
+                      <td>
+                        Sweetened espresso blended with icy-cold milk and
+                        <br />served in a chilled glass. <br /><br />
+                        <div class="dffdraic">
+                          <div class="dffdraic">
+                            Single
+                            <div class="dffdraic">
+                              <div style="margin-left: 4px">$</div>
+                              <div>
+                                <input
+                                  type="text"
+                                  name="ic-price-single"
+                                  id="ic-price-single"
+                                  value="4.75"
+                                  onblur="this.value = 
+                                  !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
+                                  readonly
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="dffdraic">
+                            Double
+                            <div class="dffdraic">
+                              <div style="margin-left: 4px">$</div>
+                              <div>
+                                <input
+                                  type="text"
+                                  name="ic-price-double"
+                                  id="ic-price-double"
+                                  value="5.75"
+                                  onblur="this.value = 
+                                  !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
+                                  readonly
+                                />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td colspan="5">
+                        <input
+                          type="submit"
+                          value="Update Price"
+                          style="background-color: white; border-color: black"
+                        />
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </form>
             </div>
           </div>
         </main>
@@ -127,34 +201,60 @@
           if (
             !(
               (e.keyCode > 95 && e.keyCode < 106) ||
-              (e.keyCode > 47 && e.keyCode < 58) ||
-              e.keyCode == 8
+              (e.keyCode > 46 && e.keyCode < 58) ||
+              e.keyCode == 8 ||
+              e.keyCode == 190
             )
           ) {
             return false;
           }
         };
 
-        function myfunction() {
-          a = document.querySelector('input[name="price1"]:checked').value;
-          b = document.querySelector('input[name="qty1"]').value;
-          document.querySelector('input[name="subtotal1"]').value = a * b;
-
-          c = document.querySelector('input[name="price2"]:checked').value;
-          d = document.querySelector('input[name="qty2"]').value;
-          document.querySelector('input[name="subtotal2"]').value = c * d;
+        function handleChange1(checkbox) {
+          if (checkbox.checked == true) {
+            document
+              .getElementById("jj-price-single")
+              .removeAttribute("readonly");
+          } else
+            document
+              .getElementById("jj-price-single")
+              .setAttribute("readonly", "readonly");
+        }
 
         function handleChange2(checkbox) {
           if (checkbox.checked == true) {
-            document.getElementById("2").removeAttribute("readonly");
-            document.getElementById("2").removeAttribute("readonly");
-          } else
-          document.getElementById("2").setAttribute("readonly", "readonly");
-          document.getElementById("2").setAttribute("readonly", "readonly");
+            document
+              .getElementById("cal-price-single")
+              .removeAttribute("readonly");
+            document
+              .getElementById("cal-price-double")
+              .removeAttribute("readonly");
+          } else {
+            document
+              .getElementById("cal-price-single")
+              .setAttribute("readonly", "readonly");
+            document
+              .getElementById("cal-price-double")
+              .setAttribute("readonly", "readonly");
+          }
         }
 
-          document.querySelector('input[name="totalprice"]').value =
-            a * b + c * d + e * f;
+        function handleChange3(checkbox) {
+          if (checkbox.checked == true) {
+            document
+              .getElementById("ic-price-single")
+              .removeAttribute("readonly");
+            document
+              .getElementById("ic-price-double")
+              .removeAttribute("readonly");
+          } else {
+            document
+              .getElementById("ic-price-single")
+              .setAttribute("readonly", "readonly");
+            document
+              .getElementById("ic-price-double")
+              .setAttribute("readonly", "readonly");
+          }
         }
       </script>
     </body>

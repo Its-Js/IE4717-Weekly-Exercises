@@ -85,18 +85,28 @@ footer {
   padding: 10px;
 }
 
-.currency-wrap {
-  position: relative;
+input:read-only {
+  background-color: rgb(0, 0, 0, 0);
+  border-color: rgb(0, 0, 0, 0);
+  font-weight: bold;
+  font-size: 1em;
 }
 
-.currency-code {
-  position: absolute;
-  left: 8px;
-  top: 10px;
+input:read-write {
+  background-color: white;
 }
 
-input {
-  padding: 10px 20px;
-  border: solid 1px #ccc;
-  border-radius: 5px;
+.dffdraic {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bold;
+}
+
+#jj-price-single,
+#cal-price-single,
+#cal-price-double,
+#ic-price-single,
+#ic-price-double {
+  width: 80px;
 }
