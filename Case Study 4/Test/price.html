@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body style="display: flex; flex-direction: column">
+    <div>
+      <input type="checkbox" class="1" onchange="handleChange(this)" />
+      <div style="display: flex; flex-direction: row">
+        <div>$</div>
+        <div><input type="text" class="1" id="2" value="20" readonly /></div>
+      </div>
+    </div>
+    <script>
+      function handleChange(checkbox) {
+        if (checkbox.checked == true) {
+          document.getElementById("2").removeAttribute("readonly");
+        } else
+          document.getElementById("2").setAttribute("readonly", "readonly");
+      }
+    </script>
+  </body>
+</html>

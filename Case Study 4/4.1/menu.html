@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <title>JavaJam Coffee House Menu</title>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="mycolor.css" />
+    </head>
+    <body>
+      <div id="wrapper">
+        <header>
+          <img
+            src="header.png"
+            width="550"
+            height="100"
+            alt="JavaJam Coffee House"
+          />
+        </header>
+        <main>
+          <div id="leftcolumn">
+            <ul>
+              <b>
+                <li>
+                  <a href="#"
+                    >Product <br />
+                    Price <br />
+                    Update</a
+                  >
+                </li>
+              </b>
+            </ul>
+          </div>
+          <div id="rightcolumn">
+            <div class="content">
+              <h2>Click to update product prices:</h2>
+              <div id="menutable">
+                <table border="0" onchange="myfunction()">
+                  <tr class="brownrow">
+                    <td style="background-color: #f5f5dd">
+                      <input type="checkbox" name="" id="" />
+                    </td>
+                    <th>Just Java</th>
+                    <td>
+                      Regular house blend. decaffeinated coffee. or flavor of
+                      <br />the day. <br /><br />
+                      <input
+                        type="radio"
+                        name="price1"
+                        value="2.00"
+                        style="float: left; margin-top: 1px"
+                        checked="checked"
+                      /><strong style="margin-right: 10px"
+                        >Endless Cup $2.00</strong
+                      >
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td style="background-color: #f5f5dd">
+                      <input type="checkbox" name="" id="" />
+                    </td>
+                    <th>Cafe au Lait</th>
+                    <td>
+                      House blended coffee infused into a smooth, steamed
+                      <br />milk. <br /><br />
+                      <input
+                        type="radio"
+                        name="price2"
+                        value="2.00"
+                        style="float: left; margin-top: 1px"
+                        checked="checked"
+                      /><strong style="float: left; margin-right: 10px"
+                        >Single $2.00</strong
+                      >
+                      <input
+                        type="radio"
+                        name="price2"
+                        value="3.00"
+                        style="float: left; margin-top: 1px"
+                      /><strong>Double $3.00</strong>
+                    </td>
+                  </tr>
+
+                  <tr class="brownrow">
+                    <td style="background-color: #f5f5dd">
+                      <input type="checkbox" name="" id="" />
+                    </td>
+                    <th>Iced<br />Cappuccino</th>
+                    <td>
+                      Sweetened espresso blended with icy-cold milk and
+                      <br />served in a chilled glass. <br /><br />
+                      <input
+                        type="radio"
+                        name="price3"
+                        value="4.75"
+                        style="float: left; margin-top: 1px"
+                        checked="checked"
+                      /><strong style="float: left; margin-right: 10px"
+                        >Single $4.75</strong
+                      >
+                      <input
+                        type="radio"
+                        name="price3"
+                        value="5.75"
+                        style="float: left; margin-top: 1px"
+                      /><strong>Double $5.75</strong>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <i>Copyright &copy; 2014 JavaJam Coffee House</i><br />
+          <a href="mailto:Shan@Jiang.com">Shan@Jiang.com</a>
+        </footer>
+      </div>
+      <script>
+        onkeydown = function (e) {
+          if (
+            !(
+              (e.keyCode > 95 && e.keyCode < 106) ||
+              (e.keyCode > 47 && e.keyCode < 58) ||
+              e.keyCode == 8
+            )
+          ) {
+            return false;
+          }
+        };
+
+        function myfunction() {
+          a = document.querySelector('input[name="price1"]:checked').value;
+          b = document.querySelector('input[name="qty1"]').value;
+          document.querySelector('input[name="subtotal1"]').value = a * b;
+
+          c = document.querySelector('input[name="price2"]:checked').value;
+          d = document.querySelector('input[name="qty2"]').value;
+          document.querySelector('input[name="subtotal2"]').value = c * d;
+
+          e = document.querySelector('input[name="price3"]:checked').value;
+          f = document.querySelector('input[name="qty3"]').value;
+          document.querySelector('input[name="subtotal3"]').value = e * f;
+
+          document.querySelector('input[name="totalprice"]').value =
+            a * b + c * d + e * f;
+        }
+      </script>
+    </body>
+  </html>
+</html>
