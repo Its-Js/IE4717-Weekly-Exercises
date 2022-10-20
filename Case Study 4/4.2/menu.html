@@ -16,196 +16,198 @@
             alt="JavaJam Coffee House"
           />
         </header>
-        <div id="leftcolumn">
-          <ul>
-            <b>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Menu</a></li>
-              <li><a href="#">Music</a></li>
-              <li><a href="#">Jobs</a></li>
-            </b>
-          </ul>
-        </div>
-        <div id="rightcolumn">
-          <div class="content">
-            <h2>Coffee at JavaJam</h2>
-            <div id="menutable">
-              <form action="checkout.php" method="post">
-                <table border="0" onchange="myfunction()">
-                  <tr class="brownrow">
-                    <th>Just Java</th>
-                    <td>
-                      Regular house blend. decaffeinated coffee. or flavor of
-                      <br />the day. <br /><br />
-                      <input
-                        type="radio"
-                        name="price1"
-                        value="2.00"
-                        style="float: left; margin-top: 1px"
-                        checked="checked"
-                      /><strong style="margin-right: 10px"
-                        >Endless Cup $2.00</strong
-                      >
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="qty1"
-                        value="0"
-                        min="0"
-                        onclick="this.select()"
-                        onblur="this.value = 
-                        !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
-                      />
-                    </td>
-                    <td>
-                      <div class="currency-wrap">
-                        <span class="currency-code">$</span>
+        <main>
+          <div id="leftcolumn">
+            <ul>
+              <b>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Jobs</a></li>
+              </b>
+            </ul>
+          </div>
+          <div id="rightcolumn">
+            <div class="content">
+              <h2>Coffee at JavaJam</h2>
+              <div id="menutable">
+                <form action="checkout.php" method="post">
+                  <table border="0" onchange="myfunction()">
+                    <tr class="brownrow">
+                      <th>Just Java</th>
+                      <td>
+                        Regular house blend. decaffeinated coffee. or flavor of
+                        <br />the day. <br /><br />
                         <input
-                          type="text"
-                          name="subtotal1"
-                          value="0"
-                          readonly
-                          class="text-currency"
-                        />
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <th>Cafe au Lait</th>
-                    <td>
-                      House blended coffee infused into a smooth, steamed
-                      <br />milk. <br /><br />
-                      <input
-                        type="radio"
-                        name="price2"
-                        value="2.00"
-                        style="float: left; margin-top: 1px"
-                        checked="checked"
-                      /><strong style="float: left; margin-right: 10px"
-                        >Single $2.00</strong
-                      >
-                      <input
-                        type="radio"
-                        name="price2"
-                        value="3.00"
-                        style="float: left; margin-top: 1px"
-                      /><strong>Double $3.00</strong>
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="qty2"
-                        value="0"
-                        min="0"
-                        onclick="this.select()"
-                        onblur="this.value = 
-                        !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
-                      />
-                    </td>
-                    <td>
-                      <div class="currency-wrap">
-                        <span class="currency-code">$</span>
+                          type="radio"
+                          name="price1"
+                          value="2.00"
+                          style="float: left; margin-top: 1px"
+                          checked="checked"
+                        /><strong style="margin-right: 10px"
+                          >Endless Cup $2.00</strong
+                        >
+                      </td>
+                      <td>
                         <input
-                          type="text"
-                          name="subtotal2"
+                          type="number"
+                          name="qty1"
                           value="0"
-                          readonly
-                          class="text-currency"
+                          min="0"
+                          onclick="this.select()"
+                          onblur="this.value = 
+                          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
                         />
-                      </div>
-                    </td>
-                  </tr>
-
-                  <tr class="brownrow">
-                    <th>Iced<br />Cappuccino</th>
-                    <td>
-                      Sweetened espresso blended with icy-cold milk and
-                      <br />served in a chilled glass. <br /><br />
-                      <input
-                        type="radio"
-                        name="price3"
-                        value="4.75"
-                        style="float: left; margin-top: 1px"
-                        checked="checked"
-                      /><strong style="float: left; margin-right: 10px"
-                        >Single $4.75</strong
-                      >
-                      <input
-                        type="radio"
-                        name="price3"
-                        value="5.75"
-                        style="float: left; margin-top: 1px"
-                      /><strong>Double $5.75</strong>
-                    </td>
-                    <td>
-                      <input
-                        type="number"
-                        name="qty3"
-                        value="0"
-                        min="0"
-                        onclick="this.select()"
-                        onblur="this.value = 
-                        !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
-                      />
-                    </td>
-                    <td>
-                      <div class="currency-wrap">
-                        <span class="currency-code">$</span>
-                        <input
-                          type="text"
-                          name="subtotal3"
-                          value="0"
-                          readonly
-                          class="text-currency"
-                        />
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="4">
-                      <div
-                        style="
-                          display: flex;
-                          flex-direction: row;
-                          align-items: center;
-                          justify-content: end;
-                        "
-                      >
-                        Total: &nbsp;
+                      </td>
+                      <td>
                         <div class="currency-wrap">
                           <span class="currency-code">$</span>
                           <input
                             type="text"
-                            name="totalprice"
+                            name="subtotal1"
                             value="0"
                             readonly
                             class="text-currency"
                           />
                         </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="4">
-                      <div
-                        style="
-                          display: flex;
-                          flex-direction: row;
-                          align-items: center;
-                          justify-content: end;
-                        "
-                      >
-                        <input type="submit" value="Check Out" />
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </form>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>Cafe au Lait</th>
+                      <td>
+                        House blended coffee infused into a smooth, steamed
+                        <br />milk. <br /><br />
+                        <input
+                          type="radio"
+                          name="price2"
+                          value="2.00"
+                          style="float: left; margin-top: 1px"
+                          checked="checked"
+                        /><strong style="float: left; margin-right: 10px"
+                          >Single $2.00</strong
+                        >
+                        <input
+                          type="radio"
+                          name="price2"
+                          value="3.00"
+                          style="float: left; margin-top: 1px"
+                        /><strong>Double $3.00</strong>
+                      </td>
+                      <td>
+                        <input
+                          type="number"
+                          name="qty2"
+                          value="0"
+                          min="0"
+                          onclick="this.select()"
+                          onblur="this.value = 
+                          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
+                        />
+                      </td>
+                      <td>
+                        <div class="currency-wrap">
+                          <span class="currency-code">$</span>
+                          <input
+                            type="text"
+                            name="subtotal2"
+                            value="0"
+                            readonly
+                            class="text-currency"
+                          />
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr class="brownrow">
+                      <th>Iced<br />Cappuccino</th>
+                      <td>
+                        Sweetened espresso blended with icy-cold milk and
+                        <br />served in a chilled glass. <br /><br />
+                        <input
+                          type="radio"
+                          name="price3"
+                          value="4.75"
+                          style="float: left; margin-top: 1px"
+                          checked="checked"
+                        /><strong style="float: left; margin-right: 10px"
+                          >Single $4.75</strong
+                        >
+                        <input
+                          type="radio"
+                          name="price3"
+                          value="5.75"
+                          style="float: left; margin-top: 1px"
+                        /><strong>Double $5.75</strong>
+                      </td>
+                      <td>
+                        <input
+                          type="number"
+                          name="qty3"
+                          value="0"
+                          min="0"
+                          onclick="this.select()"
+                          onblur="this.value = 
+                          !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : 0 & alert('please enter a valid number')"
+                        />
+                      </td>
+                      <td>
+                        <div class="currency-wrap">
+                          <span class="currency-code">$</span>
+                          <input
+                            type="text"
+                            name="subtotal3"
+                            value="0"
+                            readonly
+                            class="text-currency"
+                          />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">
+                        <div
+                          style="
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: end;
+                          "
+                        >
+                          Total: &nbsp;
+                          <div class="currency-wrap">
+                            <span class="currency-code">$</span>
+                            <input
+                              type="text"
+                              name="totalprice"
+                              value="0"
+                              readonly
+                              class="text-currency"
+                            />
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="4">
+                        <div
+                          style="
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: end;
+                          "
+                        >
+                          <input type="submit" value="Check Out" />
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
+        </main>
         <footer>
           <i>Copyright &copy; 2014 JavaJam Coffee House</i><br />
           <a href="mailto:Shan@Jiang.com">Shan@Jiang.com</a>

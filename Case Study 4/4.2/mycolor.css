@@ -15,15 +15,26 @@ header {
   background-color: #d1b38e;
   text-align: center;
 }
-
-.content {
-  background-color: #f5f5dd;
-  margin-left: 150px;
-  padding: 5px 20px 5px 20px;
+main {
+  display: flex;
+  flex-direction: row;
 }
 
 #leftcolumn {
-  float: left;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding-right: 32px;
+  background-color: #e2d1b2;
+}
+
+#rightcolumn {
+  display: flex;
+  font-display: auto;
+  width: 100%;
+  padding: 0 24px;
+
+  background-color: #f5f5dd;
 }
 #leftcolumn ul {
   list-style-type: none;
@@ -43,9 +54,6 @@ a:hover {
   color: #a57d5f;
 }
 
-#rightcolumn {
-  background-color: #e2d1b2;
-}
 #rightcolumn h2 {
   color: #350003;
 }

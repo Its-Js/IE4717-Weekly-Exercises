@@ -9,12 +9,12 @@ Daily sales reports showing the total dollar and quantity sales for each of the 
 It should also be possible to include the most popular option category of the best selling product in the report.
 
 Table:
-product | category | itemPrice | orderQty | sales
-jj | null | 2 | 0 | 0
-cal | single | 2 | 0 | 0
-cal | double | 3 | 0 | 0
-ic | single | 4.75 | 0 | 0
-ic | double | 5.75 | 0 | 0
+product id |product | category | itemPrice | orderQty | sales
+1 | jj | null | 2 | 0 | 0
+2 | cal | single | 2 | 0 | 0
+3 | cal | double | 3 | 0 | 0
+4 | ic | single | 4.75 | 0 | 0
+5 | ic | double | 5.75 | 0 | 0
 
 Daily Sales Report:
 Product | Total Dollar Sales | Quantity Sales
